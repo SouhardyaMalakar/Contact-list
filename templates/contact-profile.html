@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/41ea07dba4.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Profile Page</title>
+</head>
+<body>
+    <div class="container">
+    <header class="hero">
+    <a href="{% url 'index' %}"><i class="fas fa-arrow-left"></i>
+    </a>
+    <div class="hero-info">
+    <p class="name">{{ contact.full_name }}</p>
+    <p class="hero-relation">{{ contact.relationship}}</p>
+    </div>
+    </header>
+<div class="hero-options">
+    
+    <div class="item">
+        <div class="logo"><i class="fas fa-phone"></i></div>
+        {{ contact.phone_number }}
+    </div>
+    <div class="item">
+        <div class="logo"><i class="fas fa-comments"></i></div>
+        MESSEGE
+    </div>
+    <div class="item">
+        <div class="logo"><i class="fas fa-envelope"></i></div>
+        {{ contact.email}}
+    </div>
+    <div class="item">
+        <div class="logo"><i class="fas fa-map-marker-alt"></i></div>
+        {{ contact.address }}
+    </div>
+    <div class="item">
+        <div class="logo"><i class="fas fa-play-circle"></i></div>
+        VIDEO CALL
+    </div>
+    <a href="{% url 'edit-contact' contact.id %}">
+    <i class="fas fa-arrow-right"></i>
+  
+    </a>
+</div>
+</div>    
+</div>
+</body>
+</html>

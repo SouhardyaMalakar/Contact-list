@@ -1,0 +1,220 @@
+body{
+    font-family: 'Bungee Inline', cursive;
+    color: azure;
+    
+}
+.container{
+  
+    max-width: 500px;
+    margin:auto;
+    min-height: 100hv;
+    border-radius: 20px;
+    
+}
+.header{
+    display:flex;
+    text-align: center;
+    justify-content: space-evenly;
+    background: linear-gradient(to bottom right,rgb(255, 54, 54),rgb(94, 150, 255));
+    padding: 2em 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    outline:aliceblue;
+}
+
+.contact-search:not(:hover){
+
+font-size: 1em;
+font-family: 'Bungee Inline', cursive;
+border-radius: 100px;
+padding-left: 1em;
+transition: .2s;
+outline: none;
+}
+.contact-search:hover{
+
+    font-size: 1em;
+    font-family: 'Bungee Inline', cursive;
+    border-radius: 100px;
+    padding-left: 1em;
+    box-shadow: 15px 15px 15px black;
+    transition: .2s;
+    outline: none;
+    }
+.fa-plus-circle{
+    padding-top: 10px;
+   
+}
+i{
+    padding-top:2em;
+    padding-right: 1em;
+    font-size: 1.5em;
+}
+.contact-name{
+    margin-top: 0px;
+    font-size: 1.2; 
+}
+ul{
+    margin:0;
+    padding: 0;
+    width:100%;
+
+}
+li{
+    padding-top:30px;
+   list-style: none; 
+}
+.relation{
+background: rgba(21, 174, 235, 0.753);
+width: 10em;
+text-align: center;
+border-bottom-left-radius: 100px;
+border-top-right-radius: 100px;
+border-bottom-right-radius: 100px;
+font-size: 0.8em;
+}
+.contact-section{
+    display:flex;
+    justify-content: space-between;
+    padding: 0 1.5em;
+    transition: 0.3s;
+    background: rgb(46, 46, 46);
+}
+.contact-section:hover{
+    display:flex;
+    justify-content: space-between;
+    padding: 0 1.5em;
+    transform: scale(1.05);
+    transition: 0.3s;
+    background: rgb(59, 59, 59);
+    border-radius: 10px;
+}
+a{  
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.hero{
+    display:flex;
+    text-align: center;
+    background: linear-gradient(to bottom right,rgb(255, 54, 54),rgb(94, 150, 255));
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    outline:aliceblue;
+}
+.hero-info{
+    width:75%;
+    font-size:25px;
+}
+.fas.fa-arrow-left{
+    font-size:1.5em;
+    padding-left:-2px;
+    padding: 1em;
+}
+.name{
+    margin:0;
+    margin-left:-10px;
+    padding-top:50px;
+    padding-bottom:10px;
+
+}
+.hero-relation{
+    
+    width:40%;
+    font-size: 16px;
+    height:30%;
+    background: rgba(0, 0, 0, 0.075);
+    margin-left:100px;
+    margin-bottom:10px;
+    border-radius: 20px;
+    padding-bottom: 0px;
+    font-size: 16px;
+    height: 40px;
+}
+.hero-options{
+    display: flex;
+    justify-content:center;
+    padding-left: 80px;
+    flex-direction:column;
+    background: rgb(31, 31, 31);  
+    padding-top:100px;  
+    padding-bottom:50px; 
+}
+.item{
+    display:flex;
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom:30px;
+    padding:5px;
+    font-size: 20px;
+    text-align:center;
+    box-shadow: 0 0 20px rgba(153, 153, 153, 0.219);
+    border-radius: 100px;
+}
+
+.logo{
+height:50px;
+width:50px;
+border-radius: 100%;
+margin-right:40px;
+background: linear-gradient(to bottom right,rgb(255, 54, 54),rgb(94, 150, 255));
+}
+.back{
+display:"flex";
+justify-content: center;
+height:90px;
+width:90px;
+border-radius: 100%;
+margin-left:145px;
+margin-top:50px;
+font-size: 60px;
+padding-top: -100px;
+background: linear-gradient(to bottom right,rgb(218, 50, 50),rgb(82, 126, 209));
+box-shadow: 0 0 20px rgba(143, 141, 141, 0.616);
+}
+.fas{
+    padding: 0px;
+    padding-top: 10px;
+}
+.type{
+    background:rgb(31, 31, 31);  
+    outline: none;
+    border: none;
+    color: azure;
+    font-family: 'Bungee Inline', cursive;
+    font-size:1em;
+    width:50%;
+    height:45px;
+    text-align: center;
+}
+.opt{
+    display:flex;
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom:30px;
+    padding:5px;
+    font-size: 20px;
+    text-align:center;
+    box-shadow: 0 0 20px rgba(153, 153, 153, 0.219);
+    border-radius: 100px;
+
+}
+
+.delete-options{
+    display: flex;
+    justify-content:center;
+    padding-left: 50px;
+    flex-direction:column;
+    background: rgb(31, 31, 31);  
+    padding-top:100px;  
+    padding-bottom:500px; 
+    height: 100%;
+
+}
+.button{
+    border: none;
+    background: black;
+    width:100px;
+    font-size: 25px;
+
+}

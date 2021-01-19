@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/41ea07dba4.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit-contact</title>
+</head>
+<body>
+    <div class="container">
+    <header class="hero">
+    <a href="{% url 'contact-profile' contact.id %}"><i class="fas fa-arrow-left"></i>
+    </a>
+    <div class="hero-info">
+    <p class="name">{{ contact.full_name }}</p>
+    <p class="hero-relation">{{ contact.relationship}}</p>
+    </div>
+    </header>
+<form action="" method="POST">
+{% csrf_token %}
+<div class="hero-options">
+    
+    <div class="item">
+        <div class="logo"><i class="fas fa-user-circle"></i></div>
+       <input type="text" class="type" name="fullname" placeholder="Full Name" 
+       value="{{contact.full_name}}">
+    </div>
+    <div class="item">
+        <div class="logo"><i class="fas fa-phone"></i></div>
+        <input type="text" class="type" name="phone" placeholder="Phone Number"
+        value="{{ contact.phone_number }}">
+    </div>
+    <div class="item">
+        <div class="logo"><i class="fas fa-envelope"></i></div>
+        <input type="text" class="type" name="email" placeholder="Email"
+        value="{{contact.email}}">
+    </div>
+    <div class="item">
+        <div class="logo"><i class="fas fa-map-marker-alt"></i></div>
+        <input type="text" class="type" name="address" placeholder="Location"
+        value="{{ contact.address }}">
+    </div>
+    <div class="opt">
+        <div class="logo"><i class="fas fa-check"></i></div>
+        <button type="submit" class="button">SAVE</div> 
+    
+    <div class="opt">
+    <a href="{% url 'delete-contact' contact.id %}">
+        <div class="logo"><i class="fas fa-trash-alt">DELETE</i>
+      
+    </div>
+    </a>
+    </div>
+    
+</div>
+</div>    
+</form>
+</div>
+
+</body>
+</html>

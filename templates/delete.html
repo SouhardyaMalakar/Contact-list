@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/41ea07dba4.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+</head>
+<body>
+    <div class="container">
+    <header class="hero">
+   <a href="{% url 'edit-contact' contact.id %}">
+   <i class="fas fa-arrow-left"></i>
+    </a>
+    <div class="hero-info">
+    <p class="name">{{ contact.full_name }}</p>
+    <p class="hero-relation">{{ contact.relationship}}</p>
+    </div>
+  
+    </header>
+<form action="" method="POST">
+{% csrf_token %}
+  <div class="delete-options">
+  Are you sure you want to delete<br> this contact?
+        <div class="opt">
+        <div class="logo"><i class="fas fa-trash-alt"></i>
+        </div><button type="submit" class="button">delete</div> 
+    </div>
+</form>
+</body>
+</html>

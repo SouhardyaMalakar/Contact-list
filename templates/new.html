@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/41ea07dba4.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit-contact</title>
+</head>
+<body>
+    <div class="container">
+    <header class="hero">
+    <a href="{% url 'index' %}"><i class="fas fa-arrow-left"></i>
+    </a>
+    <div class="hero-info">
+       
+        <p class="name">New Contact </p>
+           
+    </div>
+    </header>
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="hero-options">
+    
+    <div class="item">
+        <div class="logo"><i class="fas fa-user-circle"></i></div>
+       <input type="text" class="type" name="fullname" placeholder="Full Name">
+    </div>
+    <div class="item">
+        <div class="logo"><i></i></div>
+       <input type="text" class="type" name="relation" placeholder="relation">
+    </div>
+    <div class="item">
+        <div class="logo"><i class="fas fa-phone"></i></div>
+        <input type="text" class="type" name="phone" placeholder="Phone Number">
+    </div>
+    <div class="item">
+        <div class="logo"><i class="fas fa-envelope"></i></div>
+        <input type="text" class="type" name="email" placeholder="Email">
+    </div>
+    <div class="item">
+        <div class="logo"><i class="fas fa-map-marker-alt"></i></div>
+        <input type="text" class="type" name="address" placeholder="Location">
+    </div>
+    <div class="opt">
+        <div class="logo"><i class="fas fa-check"></i>
+        </div><button type="submit" class="button">SAVE</div> 
+    </div> 
+
+</div>
+</form>
+</div>    
+
+</body>
+</html>
